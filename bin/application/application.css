@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#btnaddsave{
+	-fx-background-color:rgb(116, 162, 237) ;
+}
+#btnaddsave:hover{
+	-fx-background-color:aqua ;
+}
+#btnaddcancel{
+	-fx-background-color:rgb(116, 162, 237) ;
+}
+#btnaddcancel:hover{
+	-fx-background-color:aqua ;
+}
