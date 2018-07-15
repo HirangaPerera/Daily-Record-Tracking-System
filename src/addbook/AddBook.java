@@ -1,8 +1,6 @@
-/**
- * 
- */
-/**
- * @author Hiranga
- *
- */
 package addbook;
+
+public class AddBook {
+@FXML
+
+}
