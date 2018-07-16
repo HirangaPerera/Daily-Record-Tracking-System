@@ -6,4 +6,5 @@ public class ConDeclaration {
 	 String uname = "root";
 	 String pass= "Nolanross123!!!";
 	 static Connection conn = null;
+	 //static String query;
 }

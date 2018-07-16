@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DbConnection {
-	public void executeConnection() throws SQLException, ClassNotFoundException {
-		String query ="select sname from test where rollno=1";
+	public void executeConnection(String query) throws SQLException, ClassNotFoundException {
+		//String query="";
 		Connectivity conv = new Connectivity();
 		conv.createConnection();
 		Statement stmt = ConDeclaration.conn.createStatement();

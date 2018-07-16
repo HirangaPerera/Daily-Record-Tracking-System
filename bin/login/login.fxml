@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="340.0" maxWidth="600.0" minHeight="340.0" minWidth="600.0" prefHeight="340.0" prefWidth="600.0" style="-fx-background-color: #3D3D53; -fx-border-color: #222244; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Jjjj">
+   <children>
+      <JFXTextField fx:id="unametxt" focusColor="#f2f2f2" labelFloat="true" layoutX="158.0" layoutY="131.0" prefHeight="25.0" prefWidth="294.0" promptText="User Name" unFocusColor="#979191" />
+      <JFXPasswordField fx:id="upasswordtxt" focusColor="WHITE" labelFloat="true" layoutX="158.0" layoutY="191.0" prefHeight="25.0" prefWidth="294.0" promptText="Paassword" unFocusColor="#7c7979" />
+      <JFXButton layoutX="483.0" layoutY="22.0" onAction="#addacion" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #20203D; -fx-border-color: #9090A5;" text="Login" textFill="#d7c6c6" />
+      <JFXCheckBox layoutX="156.0" layoutY="232.0" text="Remeber Me" textFill="#f5efef">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <Label layoutX="193.0" layoutY="266.0" text="Password Hind :" textFill="#bfbaba" />
+      <JFXTextField labelFloat="true" layoutX="291.0" layoutY="262.0" promptText="Ps Hint" />
+      <ImageView fitHeight="71.0" fitWidth="78.0" layoutX="265.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/libraryone.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="212.0" layoutY="85.0" prefHeight="20.0" prefWidth="185.0" text="Library Management System" textFill="#93a0e4">
+         <font>
+            <Font name="Arial Unicode MS" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
