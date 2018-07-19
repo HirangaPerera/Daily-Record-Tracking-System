@@ -1,9 +1,10 @@
 package librarymanagementsystem.dbconnection;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
-import java.sql.Statement;
+
 
 public class DbConnection {
+	
 	Connectivity conv;
 	public DbConnection(){
 		conv = new Connectivity();
@@ -20,16 +21,12 @@ public class DbConnection {
 	public void getData(String query) throws SQLException, ClassNotFoundException {
 		//conv = new Connectivity();
 		//conv.createConnection();
-		ConDeclaration.stmt = ConDeclaration.conn.createStatement();
-		ResultSet rs = ConDeclaration.stmt.executeQuery(query);
-		rs.next();
-		String name = rs.getString("sname");
-		System.out.println(name);
-		//ConDeclaration.stmt.close();
-		//ConDeclaration.conn.close();
-		}
-	
-	public void updateData(String query) throws ClassNotFoundException, SQLException {
+		ConDeclaration.ps = ConDeclaration.conn.prepareStatement(query);
+		//ConDeclaration.stmt=ConDeclaration.conn.createStatement();
+	}
+		
+			
+public void updateData(String query) throws ClassNotFoundException, SQLException {
 		//conv = new Connectivity();
 		//conv.createConnection();
 		ConDeclaration.stmt = ConDeclaration.conn.createStatement();

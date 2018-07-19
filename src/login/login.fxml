@@ -31,7 +31,5 @@
             <Font name="Arial Unicode MS" size="14.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnfour" layoutX="483.0" layoutY="62.0" onAction="#updateTable" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #20203D; -fx-border-color: #9090A5;" text="Update" textFill="#e8d4d4" />
-      <JFXButton fx:id="btnfive" layoutX="45.0" layoutY="37.0" onAction="#closeConnection" text="next" textFill="#f8f6f6" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 package login;
 
 import java.net.URL;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -20,16 +21,33 @@ public class LoginController implements Initializable {
 	    private JFXPasswordField upasswordtxt;
 
 	DbConnection dbcon;
-	
+	String ppname;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		dbcon = new DbConnection();
 	}
 	public void getDatafrom(ActionEvent event) {
-		String query ="select sname from test where rollno=1";
+	
+		String query ="select * from test where sname=? and rollno=?";
 		try {
 			dbcon.getData(query);
+			
+			 ConDeclaration.ps.setString(1,unametxt.getText());
+			 ConDeclaration.ps.setString(2, upasswordtxt.getText());
+			ResultSet rs = ConDeclaration.ps.executeQuery();
+			int count =0;
+			while(rs.next()) {
+				count = count+1;
+			}
+			if(count ==1) {
+				System.out.println("Hii");
+			}
+			else {
+				System.out.println("puii");
+			}
+			
+	
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,9 +57,8 @@ public class LoginController implements Initializable {
 		}
 	}
 	public void updateTable(ActionEvent event) {
-		//String uname = unametxt.getText();
-		//String pswrd = upasswordtxt.getText();
-		String query = "insert into test values('5','sathila')";
+		String query="";
+		//String query = "insert into test values('"+pswrd+"','"+uname+"')";
 		try {
 			dbcon.updateData(query);
 		} catch (ClassNotFoundException e) {

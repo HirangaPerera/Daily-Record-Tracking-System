@@ -1,7 +1,6 @@
 package librarymanagementsystem.dbconnection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Connectivity extends ConDeclaration{
 	
