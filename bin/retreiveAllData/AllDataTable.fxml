@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="314.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retreiveAllData.RetrieveDataController">
+   <children>
+      <TableView fx:id="tble" layoutX="130.0" layoutY="48.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colname" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="colmail" prefWidth="144.0" text="Email" />
+            <TableColumn fx:id="colprogramme" prefWidth="120.0" text="Programme" />
+        </columns>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TableView>
+   </children>
+</AnchorPane>

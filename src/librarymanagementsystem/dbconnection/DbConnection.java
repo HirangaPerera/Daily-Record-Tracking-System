@@ -5,19 +5,14 @@ import java.sql.SQLException;
 
 public class DbConnection {
 	
-	Connectivity conv;
+	//Connectivity conv;
 	public DbConnection(){
-		conv = new Connectivity();
-		try {
-			conv.createConnection();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		//conv = new Connectivity();
+		
+			//conv.createConnection();
+		
 		}
-	}
+	
 	public void getData(String query) throws SQLException, ClassNotFoundException {
 		//conv = new Connectivity();
 		//conv.createConnection();
@@ -35,8 +30,15 @@ public void updateData(String query) throws ClassNotFoundException, SQLException
 		ConDeclaration.stmt.close();
 		ConDeclaration.conn.close();
 	}
+public void createStatementm(String query) throws SQLException, ClassNotFoundException {
+	//conv = new Connectivity();
+	//conv.createConnection();
+	//ConDeclaration.ps = ConDeclaration.conn.prepareStatement(query);
+	ConDeclaration.stmt=ConDeclaration.conn.createStatement();
+}
 	
-	}
+}	
+	
 	
 
 	
