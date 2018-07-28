@@ -50,7 +50,6 @@ public class LoginController implements Initializable {
 				count = count+1;
 			}
 			if(count ==1) {
-				//System.out.println("Hii");
 				
 				Stage stage = new Stage();
 			    stage.setTitle("Shop Management");

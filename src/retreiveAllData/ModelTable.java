@@ -2,11 +2,13 @@ package retreiveAllData;
 
 public class ModelTable {
 String ID,Name,Email,Programme;
+
 public ModelTable(String ID,String Name,String Email,String Programme) {
 	this.ID = ID;
 	this.Name = Name;
 	this.Email = Email;
 	this.Programme = Programme;
+	
 }
 public String getID() {
 	return ID;

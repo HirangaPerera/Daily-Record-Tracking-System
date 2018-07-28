@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 public class ConDeclaration {
 	 String DRIVER ="com.mysql.cj.jdbc.Driver";
-	 String url ="jdbc:mysql://127.0.0.1:3306/sqltest";
+	 String url ="jdbc:mysql://127.0.0.1:3306/library";
 	 String uname = "root";
 	 String pass= "Nolanross123!!!";
 	 public static Connection conn = null;

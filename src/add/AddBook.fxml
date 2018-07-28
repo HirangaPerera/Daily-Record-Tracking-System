@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="310.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="303.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add.AddbookController">
    <children>
-      <HBox layoutY="248.0" prefHeight="62.0" prefWidth="479.0">
+      <HBox layoutY="245.0" prefHeight="58.0" prefWidth="461.0">
          <children>
-            <Button fx:id="addsavebtn" mnemonicParsing="false" prefHeight="62.0" prefWidth="247.0" style="-fx-background-color: #5365dd;" text="Save" />
-            <Button fx:id="addcancelbtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="247.0" text="Cancel" />
+            <JFXButton fx:id="btnadd" onAction="#addData" prefHeight="58.0" prefWidth="245.0" style="-fx-background-color: #001575;" text="Add" textFill="WHITE" />
+            <JFXButton fx:id="btncancel" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="220.0" style="-fx-border-color: #001575;" text="Cancel">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
          </children>
+         <padding>
+            <Insets left="1.0" right="1.0" />
+         </padding>
       </HBox>
-      <VBox prefHeight="250.0" prefWidth="479.0" style="-fx-background-color: #D1D7E6;">
+      <VBox prefHeight="238.0" prefWidth="461.0">
          <children>
-            <JFXTextField fx:id="addidtxt" labelFloat="true" promptText="Book Id" unFocusColor="#f5e7e7">
+            <Pane prefHeight="38.0" prefWidth="451.0" style="-fx-background-color: #3e5ff2;">
+               <children>
+                  <Label layoutX="25.0" layoutY="11.0" text="Add New Book" textFill="#fffafa" />
+               </children>
+            </Pane>
+            <JFXTextField fx:id="txtisbn" labelFloat="true" promptText="ISBN">
                <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
+                  <Insets bottom="10.0" top="15.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="addnametxt" focusColor="#bec8e8" labelFloat="true" promptText="Book Name" unFocusColor="#eeecec">
+            <JFXTextField fx:id="txtname" labelFloat="true" promptText="Name">
                <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="addauthertxt" focusColor="#bec8e8" labelFloat="true" promptText="Auther" unFocusColor="#eeecec">
+            <JFXTextField fx:id="txtauther" labelFloat="true" promptText="Auther">
                <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="addpublitxt" focusColor="#bec8e8" labelFloat="true" promptText="Publisher" unFocusColor="#eeecec">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="adddatetxt" focusColor="#bec8e8" labelFloat="true" promptText="Date" unFocusColor="#eeecec">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
-               </VBox.margin>
-            </JFXTextField>
+            <JFXTextField fx:id="txtpublisher" labelFloat="true" promptText="Publisher" />
          </children>
+         <padding>
+            <Insets bottom="0.5" left="5.0" right="5.0" />
+         </padding>
       </VBox>
    </children>
 </AnchorPane>
