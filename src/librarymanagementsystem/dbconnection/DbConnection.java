@@ -1,7 +1,11 @@
 package librarymanagementsystem.dbconnection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+
+
 public class DbConnection 
 {
+
 	public void getData(String query) throws SQLException, ClassNotFoundException 
 		{
 			ConDeclaration.ps = ConDeclaration.conn.prepareStatement(query);
@@ -19,6 +23,10 @@ public class DbConnection
 			ConDeclaration.stmt=ConDeclaration.conn.createStatement();
 			ConDeclaration.stmt.executeQuery(query);
 		}
+	public void ctGetData (String query) throws SQLException {
+		ConDeclaration.stmt = ConDeclaration.conn.createStatement();
+		 
+	}
 }	
 	
 	

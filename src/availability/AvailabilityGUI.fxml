@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="359.0" prefWidth="505.0" style="-fx-background-color: #e8eaff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="availability.AvailabilityController">
+	 <children>
+      <BorderPane layoutX="13.0" layoutY="133.0" prefHeight="87.0" prefWidth="475.0" style="-fx-border-color: #081b38;" />
+      <JFXTextField fx:id="txtbookname" layoutX="178.0" layoutY="175.0" onAction="#availabilityList"/>
+      <JFXTextField fx:id="txtisbn" layoutX="178.0" layoutY="130.0" onAction="#getAvailability"/>
+      <Label layoutX="37.0" layoutY="150.0" text="ISBN" />
+      <Label layoutX="38.0" layoutY="189.0" text="Book Name" />
+      <JFXButton fx:id="btnavailability" graphicTextGap="0.0" layoutX="363.0" layoutY="142.0" onAction="#getAvailability" style="-fx-background-color: #081b38;" text="Get Availability" textFill="#e1dcdc" />
+      <JFXButton fx:id="btnsearch" layoutX="361.0" layoutY="188.0" onAction="#availabilityList" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #081b38;" text="Search ISBN" />
+      <Label fx:id="lblavailability" layoutX="361.0" layoutY="67.0" prefHeight="45.0" prefWidth="99.0" style="-fx-border-color: #000105;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="73.0" text="Availability" />
+      <TableView fx:id="tblavailability" layoutX="102.0" layoutY="236.0" prefHeight="109.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="clmnisbn" prefWidth="154.0" text="ISBN" />
+            <TableColumn fx:id="clmnbknm" prefWidth="145.0" text="Book_Name" />
+        </columns>
+      </TableView>
+      <HBox layoutX="14.0" prefHeight="45.0" prefWidth="475.0" style="-fx-background-color: #081b38;">
+         <children>
+            <Label text="Availability" textFill="#aba2a2">
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

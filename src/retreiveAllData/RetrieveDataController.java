@@ -29,6 +29,7 @@ public class RetrieveDataController implements Initializable{
 
 	    @FXML
 	    private TableColumn<ModelTable, String> colid;
+	    
 ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
 
 	@Override
