@@ -5,7 +5,9 @@ import java.sql.SQLException;
 
 public class DbConnection 
 {
-
+public ResultSet rs;
+public DbConnection() {
+}
 	public void getData(String query) throws SQLException, ClassNotFoundException 
 		{
 			ConDeclaration.ps = ConDeclaration.conn.prepareStatement(query);
@@ -25,7 +27,7 @@ public class DbConnection
 		}
 	public void ctGetData (String query) throws SQLException {
 		ConDeclaration.stmt = ConDeclaration.conn.createStatement();
-		 
+		rs = ConDeclaration.stmt.executeQuery(query);
 	}
 }	
 	
